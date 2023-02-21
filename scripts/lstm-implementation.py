@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 
 class LSTMCellNew(nn.Module):
@@ -12,7 +11,7 @@ class LSTMCellNew(nn.Module):
         self.bias_hh = nn.Parameter(torch.zeros(hidden_sz * 4))
 
     def forward(self, x, h, c):
-        # T x B x hidden_sz
+        # B x hidden_sz
         out = (
             x @ self.weight_ih
             + h @ self.weight_hh

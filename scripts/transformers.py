@@ -1,7 +1,6 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch
-
 
 # config.head_dim is typically config.embed_dim / n_heads
 # config.embed_dim is sometimes also called hidden_size
